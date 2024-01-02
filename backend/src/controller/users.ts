@@ -35,7 +35,7 @@ export const register = async (req: Request, res: Response) => {
     if (!email || !password || !name) {
         return res.status(400).json({ message: "Please, fill in the required fields" });
     }
-
+    
     const registeredUser = await prisma.user.findFirst({
         where: { email }
     });

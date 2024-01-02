@@ -1,9 +1,16 @@
 // This is your Prisma schema file,
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
+// const prisma = new PrismaClient({
+// datasources: {
+// db: {
+// url: "mysql://yourdburlstringhere" } } });
+
+// const prisma = new PrismaClient
+
 datasource db {
   provider = "mongodb"
-  url      = env("URL")
+  url      = env("DATABASE_URL")
 }
 
 generator client {
@@ -11,7 +18,7 @@ generator client {
 }
 
 model User {
-  id              String @id @default(uuid()) @map("_id") @db.ObjectId
+  id              String     @id @default(auto()) @map("_id") @db.ObjectId
   email           String
   password        String
   name            String
@@ -19,11 +26,11 @@ model User {
 }
 
 model Employee {
-  id        String @id @default(uuid()) @map("_id") @db.ObjectId
+  id        String @id @default(auto()) @map("_id") @db.ObjectId
   firstName String
   lastName  String
   age       String
   address   String
-  user      User @relation(fields: [userId], references: [id])
+  user      User   @relation(fields: [userId], references: [id])
   userId    String @db.ObjectId
 }
