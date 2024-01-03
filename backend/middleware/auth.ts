@@ -1,12 +1,8 @@
 import { Request, Response, NextFunction } from "express";
 import jwt, { JwtPayload } from "jsonwebtoken";
-import { PrismaClient, User } from "@prisma/client";
+import { PrismaClient } from "@prisma/client";
+import {} from "../types/request";
 
-declare module 'express' {
-    interface Request {
-      user?: User; // Замените на фактический тип вашего пользователя
-    }
-  }
 
 const prisma = new PrismaClient();
 
