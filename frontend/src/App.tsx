@@ -2,6 +2,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { Paths } from "./paths";
 import { Login } from "./pages/login";
 import { Register } from "./pages/register";
+import { ConfigProvider, theme } from "antd";
 
 const router = createBrowserRouter([
     {
@@ -20,9 +21,9 @@ const router = createBrowserRouter([
 
 function App() {
     return (
-        <RouterProvider router={router}>
-
-        </RouterProvider>
+        <ConfigProvider theme={{ algorithm: theme.darkAlgorithm }}>
+            <RouterProvider router={router} />
+        </ConfigProvider>
     );
 }
 
