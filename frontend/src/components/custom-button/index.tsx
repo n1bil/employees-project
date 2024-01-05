@@ -9,7 +9,7 @@ type Props = {
     danger?: boolean;
     loading?: boolean;
     shape?: "default" | "circle" | "round" | undefined;
-    icon: ReactNode;
+    icon?: ReactNode;
 };
 
 export const CustomButton = ({ children, htmlType = 'button', onClick, type, danger, loading, shape, icon }: Props) => {

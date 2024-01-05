@@ -11,7 +11,7 @@ export const Header = () => {
             <Space>
                 <TeamOutlined className={styles.teamIcon} />
                 <Link to={Paths.home}>
-                    <CustomButton type="text">
+                    <CustomButton type="link">
                         <Typography.Title level={1}>Employees</Typography.Title>
                     </CustomButton>
                 </Link>
