@@ -1,11 +1,6 @@
+import { User } from '../../types';
 import { api } from './api';
 
-type User = {
-    id: string;
-    email: string;
-    password: string;
-    name: string;
-}
 
 export type RequestUserData = Omit<User, 'id'>
 type ResponseLoginData = User & { token: string }
