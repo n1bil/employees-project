@@ -6,11 +6,12 @@ import { ConfigProvider, theme } from "antd";
 import { Provider } from "react-redux";
 import { store } from "./app/store";
 import { Auth } from "./features/auth/auth";
+import { Employees } from "./pages/employees";
 
 const router = createBrowserRouter([
     {
         path: Paths.home,
-        element: <h1>Employees</h1>,
+        element: <Employees />,
     },
     {
         path: Paths.login,
