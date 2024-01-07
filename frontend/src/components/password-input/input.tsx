@@ -25,7 +25,7 @@ export const PasswordInput = ({ name, placeholder, dependencies }: Props) => {
                     }
                     return Promise.reject(new Error('Password must be matched'));
                 } else {
-                    if (value.length < 6) {
+                    if (value.length < 3) {
                         return Promise.reject(new Error('Password must be longer that six symbols'));
                     }
 

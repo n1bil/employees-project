@@ -3,6 +3,8 @@ import { Paths } from "./paths";
 import { Login } from "./pages/login";
 import { Register } from "./pages/register";
 import { ConfigProvider, theme } from "antd";
+import { Provider } from "react-redux";
+import { store } from "./app/store";
 
 const router = createBrowserRouter([
     {
@@ -21,9 +23,11 @@ const router = createBrowserRouter([
 
 function App() {
     return (
-        <ConfigProvider theme={{ algorithm: theme.darkAlgorithm }}>
-            <RouterProvider router={router} />
-        </ConfigProvider>
+        <Provider store={store}>
+            <ConfigProvider theme={{ algorithm: theme.darkAlgorithm }}>
+                <RouterProvider router={router} />
+            </ConfigProvider>
+        </Provider>
     );
 }
 
