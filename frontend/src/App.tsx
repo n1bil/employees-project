@@ -5,6 +5,7 @@ import { Register } from "./pages/register";
 import { ConfigProvider, theme } from "antd";
 import { Provider } from "react-redux";
 import { store } from "./app/store";
+import { Auth } from "./features/auth/auth";
 
 const router = createBrowserRouter([
     {
@@ -25,7 +26,9 @@ function App() {
     return (
         <Provider store={store}>
             <ConfigProvider theme={{ algorithm: theme.darkAlgorithm }}>
-                <RouterProvider router={router} />
+                <Auth>
+                    <RouterProvider router={router} />
+                </Auth>
             </ConfigProvider>
         </Provider>
     );
