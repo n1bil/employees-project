@@ -46,7 +46,7 @@ const router = createBrowserRouter([
 function App() {
     return (
         <Provider store={store}>
-            <ConfigProvider theme={{ algorithm: theme.darkAlgorithm }}>
+            <ConfigProvider theme={{ algorithm: theme.defaultAlgorithm }}>
                 <Auth>
                     <RouterProvider router={router} />
                 </Auth>

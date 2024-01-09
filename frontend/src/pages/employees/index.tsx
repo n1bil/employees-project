@@ -45,13 +45,14 @@ export const Employees = () => {
     return (
         <Layout>
             <CustomButton
-                type="primary"
+                type="default"
                 onClick={goToAddUser}
                 icon={<PlusCircleOutlined />}
             >
                 Add
             </CustomButton>
-            <Table 
+            <Table
+                className="custom-table"
                 loading={isLoading}
                 dataSource={data}
                 pagination={false}

@@ -24,7 +24,7 @@ export const Header = () => {
                 <TeamOutlined className={styles.teamIcon} />
                 <Link to={Paths.home}>
                     <CustomButton type="link">
-                        <Typography.Title level={1}>Employees</Typography.Title>
+                        <Typography.Title level={1} style={{ color: 'black' }}>Employees</Typography.Title>
                     </CustomButton>
                 </Link>
             </Space>

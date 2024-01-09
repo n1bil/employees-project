@@ -12,10 +12,29 @@ html, body, body > div {
 
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #141414;
-  color: white;
+  color: #141414;
+  background-image: url("../public/background.jpg");
+  background-size: cover;
 }
 
 a {
   text-decoration: none;
 }
+
+
+.ant-table-wrapper.custom-table .ant-table-thead th {
+  background-color: rgba(209, 226, 235, 0.5);
+  color: #333;
+}
+
+.ant-table-wrapper.custom-table .ant-table-tbody > tr > td {
+  background-color: rgba(230, 247, 255, 0.5); 
+  color: #333;
+}
+
+
+
+
+
+
+

@@ -59,14 +59,14 @@ export const Employee = () => {
 
     return (
         <Layout>
-            <Descriptions title="Employee information" bordered>
-                <Descriptions.Item label="Name" span={3}>
+            <Descriptions title="Employee information" bordered >
+                <Descriptions.Item label="Name" span={3} style={{ color: "black", fontWeight: "500" }}>
                     {`${data.firstName} ${data.lastName}`}
                 </Descriptions.Item>
-                <Descriptions.Item label="Age" span={3}>
+                <Descriptions.Item label="Age" span={3} style={{ color: "black", fontWeight: "500" }}>
                     {data.age}
                 </Descriptions.Item>
-                <Descriptions.Item label="Address" span={3}>
+                <Descriptions.Item label="Address" span={3} style={{ color: "black", fontWeight: "500" }}>
                     {data.address}
                 </Descriptions.Item>
             </Descriptions>
