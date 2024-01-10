@@ -39,7 +39,7 @@ export const Login = () => {
                     <Form onFinish={login}>
                         <CustomInput type="email" name="email" placeholder="Email" />
                         <PasswordInput name="password" placeholder="password" />
-                        <CustomButton type="primary" htmlType="submit">
+                        <CustomButton type="default" htmlType="submit">
                             Log In
                         </CustomButton> 
                     </Form>
