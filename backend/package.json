@@ -4,6 +4,7 @@
   "description": "",
   "main": "dist/server.js",
   "scripts": {
+    "build": "prisma generate && your-other-build-commands",
     "start": "nodemon server.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
