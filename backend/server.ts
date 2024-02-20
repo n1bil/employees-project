@@ -10,7 +10,7 @@ config();
 
 const port = process.env.PORT || 3000;
 app.use(morgan("dev"));
-app.use(cors({ credentials: true, origin: ["https://employees-frontend-sigma.vercel.app/"] }));
+app.use(cors({ credentials: true, origin: ["https://employees-frontend-sigma.vercel.app"] }));
 app.use(express.json());
 
 app.use("/api/user", userRoutes);
