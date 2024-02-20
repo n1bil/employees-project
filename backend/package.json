@@ -5,11 +5,10 @@
   "main": "dist/server.js",
   "scripts": {
     "postinstall": "prisma generate",
-    "build": "npm run build-app",
-    "build-app": "npm run build && npm run postbuild",
-    "postbuild": "echo \"Post build tasks go here\"",
     "start": "nodemon server.ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon server.ts",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "vercel-build": "echo hello"
   },
   "keywords": [],
   "author": "nabil",
